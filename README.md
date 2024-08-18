@@ -40,3 +40,9 @@ That's all. Cya, sigmas.
 
 ## Hey! 
 My name is Vlad Korolenko. I really enjoyed this course. I learned many things about git!
+
+---
+
+## Hi!???
+My name is Vadim Kovalchuk .I really like this game which you dropped sat for half a day 
+but liked it!!?? 
