@@ -68,3 +68,6 @@ I am Arsenii. The course is great!
 ## Hi
 My name is Maks, I really enjoyed git, while learning it, I learned a lot for myself!
 ---
+## Aloha!
+I`m Oleksandr Helevan. In this course I learned some interesting and useful things about Git.
+---
