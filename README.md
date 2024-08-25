@@ -79,3 +79,11 @@ My name is Danylo. My impression is positive, due to the fact that Git has so mu
 ## Hello everyone!
 
 I'm Katia and although I've struggled, i like working with git! (=^ ◡ ^=) 
+
+---
+
+## Hello everyone!
+
+My name is Andrew! I love my university very much and I love drinking beer even more!
+
+(https://www.google.com/url?sa=i&url=https%3A%2F%2Ftenor.com%2Fview%2Foptimusgang-gif-25942552&psig=AOvVaw1OGjfN6U-qGtzm85q38ITm&ust=1724691594717000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCNjazoXPkIgDFQAAAAAdAAAAABBH)
