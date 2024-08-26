@@ -91,3 +91,7 @@ I am Anton. I am dealing with this course. I love beer. And programming
 
 Im Mary and i try to do this(not first attempt)
 
+## Greetings from 243(5) to everyone
+It was new for me to learn about Git's multitasking and the features it offers to users. Git is an integral part of a programmer's work, his life :)
+
+
