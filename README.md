@@ -161,3 +161,9 @@ My name is Andrew! I love my university very much and I love drinking beer even 
 ## Hi!
 
 I'm Kazimir Vitaliy and I'm very excited to learn web-technologies)
+
+----
+
+## Hello there!
+
+-Gene.. I Vova Dudko am thrilled and ecstatic to participate at this course. A long journey ahead of us awaits, lets not keep it waiting for long!
