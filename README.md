@@ -167,3 +167,8 @@ My name is Andrew! I love my university very much and I love drinking beer even 
 
 I'm Kazimir Vitaliy and I'm very excited to learn web-technologies)
  main
+---
+# Hello everyone!
+I'm Ursulyak Oleksandra. I found a lot of information about Git!
+
+
