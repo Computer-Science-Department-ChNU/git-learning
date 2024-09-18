@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Questionnaire</title>
+</head>
+<body>
+<h1>Анкета користувача</h1>
+<form action="questionnaire.html" method="post" enctype="multipart/form-data">
+    <fieldset>
+        <legend>Особисті дані</legend>
+        <label for="firstName">Ім'я:</label>
+        <input type="text" id="firstName" name="firstName" placeholder="Введіть ваше ім'я" required tabindex="1"><br><br>
+
+        <label for="lastName">Прізвище:</label>
+        <input type="text" id="lastName" name="lastName" placeholder="Введіть ваше прізвище" required tabindex="2"><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="example@gmail.com" autocomplete="off" required tabindex="3" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"><br><br>
+
+        <label for="phone">Мобільний телефон:</label>
+        <input type="tel" id="phone" name="phone" placeholder="+380123456789" required tabindex="4" pattern="\+380\d{9}"><br><br>
+
+        <label for="password">Пароль:</label>
+        <input type="password" id="password" name="password" placeholder="Придумайте пароль" required tabindex="5"
+               pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"><br><br>
+
+        <label for="dob">Дата народження:</label>
+        <input type="date" id="dob" name="dob" required tabindex="6"><br><br>
+    </fieldset>
+
+    <fieldset>
+        <legend>Ваша стать</legend>
+        <label><input type="radio" name="gender" value="male" required tabindex="7"> Чоловіча</label><br>
+        <label><input type="radio" name="gender" value="female" tabindex="8"> Жіноча</label><br>
+        <label><input type="radio" name="gender" value="other" tabindex="9"> Інше</label><br><br>
+    </fieldset>
+
+    <fieldset>
+        <legend>Тип користування</legend>
+        <label><input type="radio" name="userType" value="new" tabindex="10"> Новий користувач</label><br>
+        <label><input type="radio" name="userType" value="returning" tabindex="11" checked> Повертається</label><br>
+        <label><input type="radio" name="userType" value="guest" tabindex="12"> Гість</label><br><br>
+    </fieldset>
+
+    <fieldset>
+        <legend>Інтереси</legend>
+        <label><input type="checkbox" name="interest" value="sports" tabindex="13"> Спорт</label><br>
+        <label><input type="checkbox" name="interest" value="music" tabindex="14"> Музика</label><br>
+        <label><input type="checkbox" name="interest" value="travel" tabindex="15"> Подорожі</label><br>
+        <label><input type="checkbox" name="interest" value="books" tabindex="16"> Книги</label><br><br>
+    </fieldset>
+
+    <fieldset>
+        <legend>Виберіть країну</legend>
+        <label for="country">Країна:</label>
+        <select id="country" name="country" tabindex="17">
+            <option value="ua">Україна</option>
+            <option value="pl">Польща</option>
+            <option value="de" selected>Німеччина</option>
+            <option value="fr">Франція</option>
+            <option value="us">США</option>
+        </select><br><br>
+    </fieldset>
+
+    <fieldset>
+        <legend>Виберіть улюблені міста</legend>
+        <label for="cities">Міста:</label>
+        <select id="cities" name="cities" multiple tabindex="18">
+            <option value="kyiv">Київ</option>
+            <option value="lviv">Львів</option>
+            <option value="warsaw">Варшава</option>
+            <option value="berlin">Берлін</option>
+            <option value="paris">Париж</option>
+            <option value="new_york">Нью-Йорк</option>
+        </select><br><br>
+    </fieldset>
+
+    <fieldset>
+        <legend>Виберіть улюблену страву</legend>
+        <label for="food">Страва:</label>
+        <select id="food" name="food" list="food-options" tabindex="19">
+            <option value="pizza">Піца</option>
+            <option value="pasta">Паста</option>
+            <option value="sushi">Суші</option>
+            <option value="steak">Стейк</option>
+        </select>
+        <datalist id="food-options">
+            <option value="борщ"></option>
+            <option value="плов"></option>
+            <option value="салат"></option>
+        </datalist><br><br>
+    </fieldset>
+
+    <fieldset>
+        <legend>Файли</legend>
+        <label for="audio">Завантажте аудіо-файли:</label>
+        <input type="file" id="audio" name="audioFiles" accept="audio/*" multiple tabindex="20"><br><br>
+    </fieldset>
+
+    <fieldset>
+        <legend>Коментар</legend>
+        <label for="comments">Ваші зауваження:</label><br>
+        <textarea id="comments" name="comments" rows="5" cols="50" placeholder="Введіть ваш коментар" tabindex="21"></textarea><br><br>
+    </fieldset>
+
+    <input type="submit" value="Надіслати" tabindex="22">
+    <input type="reset" value="Скинути" tabindex="23">
+</form>
+</body>
+</html>
