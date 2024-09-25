@@ -1,0 +1,23 @@
+a {
+    color: purple;
+}
+
+.list_header {
+    color: green;
+}
+
+.list_square {
+    list-style: square;
+}
+
+.list_icon {
+    list-style-image:url("../img/li.svg");
+}
+
+.list_none {
+    list-style: none;
+}
+
+.list_href {
+    text-decoration: none;
+}

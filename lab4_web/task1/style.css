@@ -1,0 +1,48 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    line-height: 40px;
+}
+
+p {
+    color: green;
+    text-align: center;
+}
+
+div {
+    text-align: justify;
+}
+
+/* 1.4 Селектор класів для 1-го та 3-го абзаців */
+.red-text {
+    color: red;
+}
+
+/* 1.5 Заборона перенесення рядка в 1-му абзаці */
+.no-wrap {
+    white-space: nowrap;
+}
+
+/* 1.6 Селектор ідентифікатора для 2-го абзацу */
+#italic-bold {
+    font-style: italic;
+    font-weight: bold;
+}
+
+/* 1.7 Селектор класу для тіні до 2-го абзацу та 2-го блочного елемента */
+.text-shadow {
+    text-shadow: 5px -5px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* 1.8 Стилі для 1-го блочного елемента */
+.block1 {
+    text-decoration: line-through;
+    text-transform: uppercase;
+    text-indent: 50px;
+}
+
+/* 1.9 Стилі для 2-го блочного елемента */
+.block2 {
+    letter-spacing: 30px;
+    word-spacing: 50px;
+}
