@@ -1,0 +1,30 @@
+body {
+    text-align: center;
+}
+
+h1 {
+    color: red;
+}
+
+h2 {
+    font-style: italic;
+}
+
+.ingredients {
+    font-size: 19px;
+}
+
+.highlight {
+    background-color: yellow;
+}
+
+.green-line {
+    border: none;
+    height: 5px;
+    background-color: green;
+    width: 41%;
+}
+
+.italic-text {
+    font-style: oblique;
+}
