@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Анкета</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1 align="center">Анкета</h1>
+</header>
+
+<main>
+  <form action="" method="post" enctype="multipart/form-data">
+    <fieldset tabindex="1">
+      <legend>Особиста інформація</legend>
+
+      <label for="name">
+	Ім'я
+        <input id="name" type="text" name="name" placeholder="Введіть ім'я..." minlength="1" maxlength="50" required>
+      </label>
+      <br>
+
+      <label for="surname">
+	Прізвище
+        <input id="surname" type="text" name="surname" placeholder="Введіть прізвище..." minlength="1" maxlength="50" required>
+      </label>
+      <br>
+
+      <label for="date">
+	Дата народження
+        <input id="date" type="date" name="birth_date" required>
+      </label>
+      <br>
+
+	<p>Стать</p>
+      <label for="sex_male">
+        <input id="sex_male" type="radio" name="sex" value="male"> Чоловіча
+      </label>
+      <br>
+      <label for="sex_female">
+        <input id="sex_female" type="radio" name="sex" value="female"> Жіноча
+      </label>
+      <br>
+      <label for="sex_other">
+        <input id="sex_other" type="radio" name="sex" value="other" checked> Інша
+      </label>
+    </fieldset>
+
+    <br>
+
+    <fieldset tabindex="2">
+      <legend>Пароль</legend>
+      <label for="password">
+        <input id="password" type="password" name="password" placeholder="Введіть пароль" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" required>
+      </label>
+    </fieldset>
+
+    <br>
+
+    <fieldset tabindex="3">
+      <legend>Контактна інформація</legend>
+
+      <label for="email">
+	Електронна адреса
+        <input id="email" type="email" name="email" placeholder="email@gmail.com" pattern="[a-z0-9._]+@[a-z0-9.-]+\.[a-z]{2,}$" autocomplete="off" required>
+      </label>
+      <br>
+
+      <label for="phone">
+	Номер мобільного
+        <input id="phone" type="tel" name="phone" placeholder="+38 000 000 00 00" pattern="\+38\s\d{3}\s\d{3}\s\d{2}\s\d{2}" required>
+      </label>
+    </fieldset>
+
+    <br>
+
+    <!-- Додаткові поля форми тут -->
+
+    <button type="submit">Відправити</button>
+    <button type="reset">Скинути</button>
+  </form>
+</main>
+
+</body>
+</html>

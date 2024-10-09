@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+table {
+    border-collapse: collapse;
+    text-align: center;
+}
+
+th, td {
+    padding: 15px;
+    border: 1px solid #fff;
+}
+
+/* Заголовок таблиці */
+th {
+    font-size: 16px;
+    width: 200px;
+    color: white;
+}
+
+th:nth-child(2){
+    background-color: #E5B8B7;
+}
+
+th:nth-child(3){
+    background-color: #D99594;
+}
+
+th:nth-child(4){
+    background-color: #943634;
+}
+
+th:nth-child(5){
+    background-color: #632423;
+}
+
+/* Кольори для колонок від світлішого до темнішого */
+td:nth-child(2) {
+    background-color: #f4cccc;
+}
+
+td:nth-child(3) {
+    background-color: #ea9999;
+}
+
+td:nth-child(4) {
+    background-color: #f4cccc;
+}
+
+td:nth-child(5) {
+    background-color: #ea9999;
+
+}
+
+/* Кольори для заголовків рядків */
+td:first-child {
+    background-color: #c94444;
+    color: white;
+    font-weight: bold;
+    text-align: left;
+}
+
+/* Центрування іконок "+" і "-" */
+td {
+    font-size: 16px;
+}
+
+/* Верхній рядок заголовка */
+tr:first-child th:nth-child(1) {
+    background-color: #F2DBDB;
+    text-align: left;
+}
+
+/* Приховуємо рамку зліва у першій колонці */
+td:first-child, th:first-child {
+    border-left: none;
+}

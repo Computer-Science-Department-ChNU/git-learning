@@ -1,0 +1,112 @@
+/* Стилі для контейнера */
+.container {
+    background-color: rgb(255, 165, 0);
+    width: 500px;
+    padding: 20px;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+
+h1 {
+    font-size: 25px;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+
+
+.level-1 > li > span {
+    background-color: rgb(199, 124, 106);
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+
+.level-1 {
+    list-style: none;
+    padding: 0;
+}
+.level-1 > li{
+    background-color: rgb(103, 158, 128);
+    margin-bottom: 10px;
+    background-image: url("icons/rule.svg");
+    background-repeat: no-repeat;
+    background-size: 45px 45px;
+    padding-left: 45px;
+}
+.level-1-ul > li > span {
+    font-size: 20px;
+    font-weight: bold;
+    background-color: rgb(199, 124, 106);
+    margin-bottom: 10px;
+}
+
+
+.level-2 {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 10px;
+}
+
+.level-2 > li {
+    background-color: rgb(153, 180, 102);
+    padding: 10px 40px;
+    margin-bottom: 10px;
+    position: relative;
+    border-radius: 5px;
+}
+
+.level-2 > li > span {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-left: 10px;
+    background-color: rgb(218, 106, 32);
+    color: white;
+    border-radius: 3px;
+    font-size: 18px;
+    font-style: italic;
+}
+
+
+.level-2 > li {
+    background-repeat: no-repeat;
+    background-position: 0 center;
+}
+
+.level-1 li:nth-child(1) .level-2 li:nth-child(1) {
+    background-image: url('icons/ad_units.svg');
+}
+
+.level-1 li:nth-child(1) .level-2 li:nth-child(2) {
+    background-image: url('icons/airplane_ticket.svg');
+}
+
+.level-1 li:nth-child(1) .level-2 li:nth-child(3) {
+    background-image: url('icons/hotel.svg');
+}
+
+.level-1 li:nth-child(1) .level-2 li:nth-child(4) {
+    background-image: url('icons/car_rental.svg');
+}
+
+.level-1 li:nth-child(2) .level-2 li:nth-child(1) {
+    background-image: url('icons/local_bar.svg');
+}
+
+.level-1 li:nth-child(2) .level-2 li:nth-child(2) {
+    background-image: url('icons/casino.svg');
+}
+
+.level-1 li:nth-child(2) .level-2 li:nth-child(3) {
+    background-image: url('icons/museum.svg');
+}
+
+.level-1 li:nth-child(2) .level-2 li:nth-child(4) {
+    background-image: url('icons/festival.svg');
+}
