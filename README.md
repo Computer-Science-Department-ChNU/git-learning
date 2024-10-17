@@ -275,3 +275,8 @@ I don't know what else to add here, but all I want to say is that if you want to
 And what else do I want to add about myself, yes, I'm a guy in a cool suit. But who am I without it? - Uh, a genius, a playboy, a philanthropist, a billionaire. :)
 
 ![toni](https://github.com/user-attachments/assets/2c4494d3-dba8-4aee-b892-6a5a4cb88247)
+
+
+## Hello everyone
+
+My name is Kirill and I learn git
