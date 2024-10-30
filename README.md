@@ -280,3 +280,7 @@ And what else do I want to add about myself, yes, I'm a guy in a cool suit. But 
 ## Hello everyone
 
 My name is Kirill and I learn git
+
+##Hi guys
+
+My name Krystina. Thanks to this task, I learned a lot of new and interesting things about git.
