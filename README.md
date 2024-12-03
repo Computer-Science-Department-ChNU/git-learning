@@ -1,4 +1,4 @@
-
+I`m Dima zxzxzxzxzxz////..
 I`m Bohdan
 
 ## HELLO WORD!!!
@@ -276,7 +276,7 @@ And what else do I want to add about myself, yes, I'm a guy in a cool suit. But 
 
 ![toni](https://github.com/user-attachments/assets/2c4494d3-dba8-4aee-b892-6a5a4cb88247)
 
-
+hi everyone, my name is Dima.d/c.xz.c/zxc/zx.czx.cxzczxcxzcz
 ## Hello everyone
 
 My name is Kirill and I learn git
