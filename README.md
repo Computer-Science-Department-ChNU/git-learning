@@ -240,3 +240,10 @@ I am Bohdan Marher, and I`m liked this course web-technologies!
 ## Hi!
 
 I'm Andrushchak Yevhen and I'm glad I started learning web programming ;)
+
+-----------------------
+
+I'm Illia Mykhaliyk and I'm very excited to learn web-technologies)
+
+
+
