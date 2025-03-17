@@ -1,3 +1,8 @@
+
+I`m Bohdan
+
+## HELLO WORD!!!
+
 ## Hello everyone!!!!
 
 # Web-programming. Learning git.
@@ -200,9 +205,23 @@ My name is Andrew! I love my university very much and I love drinking beer even 
 ## Hi!
 
 I'm Kazimir Vitaliy and I'm very excited to learn web-technologies)
+ main
+---
+# Hello everyone!
+I'm Ursulyak Oleksandra. I found a lot of information about Git!
+
+
+=======
 
 ## Hi!
+My name is Vadim and I really enjoyed working with Git. It's a really user-friendly environment for programmers.
 
+## Hello
+
+My name is Ivan and I really like this course!!
+=======
+
+=======
 # My name is Vadim and I really enjoyed working with Git. It's a really user-friendly environment for programmers.
 
 ## Hello!
@@ -239,4 +258,29 @@ I am Bohdan Marher, and I`m liked this course web-technologies!
 
 ## Hi!
 
+My name is Vadim and I really enjoyed working with Git. It's a really user-friendly environment for programmers.
+
+## Hello!
 I'm Andrushchak Yevhen and I'm glad I started learning web programming ;)
+
+## Hello everyone!
+
+My name is Olexii! I love my university very much and I love github!
+
+# web-technologies.
+My name is Bogdan Babin , and I am currently studying in my second year at CHNU. This message is for my first web programming lab. Working with Git has been an exciting experience, as it simplifies version control and collaboration. I look forward to mastering it further and applying it in my future projects
+
+I don't know what else to add here, but all I want to say is that if you want to play some games, I will gladly agree, here is a link to my steam profile https://steamcommunity.com/profiles/76561198905140414/
+
+And what else do I want to add about myself, yes, I'm a guy in a cool suit. But who am I without it? - Uh, a genius, a playboy, a philanthropist, a billionaire. :)
+
+![toni](https://github.com/user-attachments/assets/2c4494d3-dba8-4aee-b892-6a5a4cb88247)
+
+
+## Hello everyone
+
+My name is Kirill and I learn git
+
+## Hello there!
+
+Hi, I'm Vlad! I'm trying to study, but it's not going very well. That's all!
