@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <script>
+        class Product {
+            constructor(id, name, price, quantity) {
+                this.id = id;
+                this.name = name;
+                this.price = price;
+                this.quantity = quantity;
+            }
+        }
+
+        class User {
+            constructor(name) {
+                this.name = name;
+            }
+        }
+
+        class Store {
+            constructor() {
+                this.products = new Map();
+                this.orders = new Set();
+                this.changeHistory = new WeakMap();
+                this.activeUsers = new WeakSet();
+                this.productIdCounter = 1;
+            }
+
+            addProduct(name, price, quantity) {
+                const id = this.productIdCounter++;
+                const product = new Product(id, name, price, quantity);
+                this.products.set(id, product);
+                this.changeHistory.set(product, [`Продукт створено(${name})`]);
+                console.log(`Додано продукт: ${name}`);
+                return id;
+            }
+
+            removeProduct(id) {
+                const product = this.products.get(id);
+
+                if (product) {
+                    this.products.delete(id);
+                    console.log(`Видалено продукт: ${product.name}`);
+                } else {
+                    console.log(`Продукт з id ${id} не знайдено.`);
+                }
+            }
+
+            updateProduct(id, newData) {
+                const product = this.products.get(id);
+                if (!product) return console.log(`Продукт не знайдено.`);
+
+                if (newData.price !== undefined) {
+                    product.price = newData.price;
+                    this.changeHistory.get(product).push(`Ціну оновлено до ${newData.price}`);
+                }
+                if (newData.quantity !== undefined) {
+                    product.quantity = newData.quantity;
+                    this.changeHistory.get(product).push(`Кількість оновлено до ${newData.quantity}`);
+                }
+
+                console.log(`Продукт ${product.name} оновлено.`);
+            }
+
+            findProductByName(name) {
+                for (let product of this.products.values()) {
+                    if (product.name.toLowerCase() === name.toLowerCase()) {
+                        console.log(`Знайдено продукт:`, product);
+                        return product;
+                    }
+                }
+                console.log(`Продукт "${name}" не знайдено.`);
+                return null;
+            }
+
+            placeOrder(user, productId, quantity) {
+                const product = this.products.get(productId);
+                if (!product) return console.log(`Продукт не знайдено.`);
+                if (product.quantity < quantity) return console.log(`Недостатньо товару на складі.`);
+
+                product.quantity -= quantity;
+                this.orders.add({ user: user.name, product: product.name, quantity});
+                this.activeUsers.add(user);
+                this.changeHistory.get(product).push(`Було замовлено ${quantity} шт.`);
+                console.log(`${user.name} купив ${quantity} шт. "${product.name}"`);
+            }
+
+            showChangeHistory(id) {
+                const product = this.products.get(id);
+                if (!product) return console.log("Продукт не знайдено.");
+                console.log(`Історія змін для ${product.name}:`, this.changeHistory.get(product));
+            }
+        }
+
+
+        const store = new Store();
+
+        const id1 = store.addProduct("Ноутбук", 30000, 10);
+        const id2 = store.addProduct("Мишка", 800, 50);
+
+        store.updateProduct(id1, { price: 28000 });
+        store.updateProduct(id2, { quantity: 40 });
+
+        store.findProductByName("Мишка");
+
+        const user1 = new User("Іван");
+        store.placeOrder(user1, id1, 2);
+
+        store.showChangeHistory(id1);
+
+        store.removeProduct(id2);
+    </script>
+</body>
+</html>

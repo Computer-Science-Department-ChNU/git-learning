@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .lamp {
+            width: 100px;
+            height: 150px;
+            background-color: gray;
+            border-radius: 50%;
+            margin: 20px auto;
+            transition: background-color 0.7s, opacity 0.7s;
+        }
+
+        .lamp.energy-saving.on {
+            background-color: #6da5c5;
+        }
+
+        .lamp.led.on {
+            background: linear-gradient(#6da5c5, 80%, yellow);
+        }
+
+        .lamp.on {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="lamp" id="lamp"></div>
+    <button id="toggleButton">Перемкнути</button>
+    <select id="lampType">
+        <option value="default">Звичайний</option>
+        <option value="energy-saving">Енергозберігаюча</option>
+        <option value="led">Світлодіодна</option>
+    </select>
+    <button id="brightnessButton">Змінити яскравість</button>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const lamp = document.getElementById("lamp");
+            const toggleButton = document.getElementById("toggleButton");
+            const typeSelect = document.getElementById("lampType");
+            const brightnessButton = document.getElementById("brightnessButton");
+            let timeout;
+
+            function resetAutoOff() {
+                if (timeout) clearTimeout(timeout)
+
+                timeout = setTimeout(() => {
+                    lamp.classList.remove("on");
+                }, 10000);
+            }
+
+            toggleButton.addEventListener("click", () => {
+                lamp.classList.toggle("on")
+                resetAutoOff();
+            })
+
+            typeSelect.addEventListener("change", () => {
+                lamp.className = "lamp";
+                lamp.classList.add(typeSelect.value);
+            })
+
+            brightnessButton.addEventListener("click", () => {
+                const brightness = prompt("Введіть яскравість у відсотках числом від 0 до 100:");
+                const value = parseFloat(brightness);
+                if (!isNaN(value) && value >= 0 && value <= 100) {
+                    lamp.style.opacity = (value / 100).toString();
+                }
+            })
+        })
+    </script>
+</body>
+</html>

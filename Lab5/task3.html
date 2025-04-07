@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        #clock {
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .blinking {
+            opacity: 0.3;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="section">
+        <div>⏰ Цифровий годинник:</div>
+        <div id="clock"></div>
+    </div>
+
+    <div class="section">
+        <div>⏳ Таймер зворотного відліку:</div>
+        <input type="datetime-local" id="countdown-input">
+        <button onclick="startCountdown()">Старт</button>
+        <div id="countdown"></div>
+    </div>
+
+    <div class="section">
+        <div>📅 Календар:</div>
+        <input type="month" id="calendar">
+    </div>
+
+    <div class="section">
+        <div>🎉 День народження:</div>
+        <input type="date" id="birthday">
+        <button onclick="calculateBirthday()">Порахувати</button>
+        <div id="birthday-countdown"></div>
+    </div>
+
+    <script>
+        function updateClock() {
+            const clock = document.getElementById("clock");
+            const now = new Date();
+
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+
+            const separator = now.getSeconds() % 2 === 0 ? ':' : '<span class="blinking">:</span>';
+
+            clock.innerHTML = `${hours}${separator}${minutes}${separator}${seconds}`;
+        }
+
+        setInterval(updateClock, 1000);
+        updateClock();
+
+        function startCountdown() {
+            const input = document.getElementById("countdown-input").value;
+            const countdownDisplay = document.getElementById("countdown");
+            const endTime = new Date(input);
+
+            if (isNaN(endTime)) {
+                countdownDisplay.textContent = "Некоректна дата";
+                return;
+            }
+
+            const interval = setInterval(() => {
+                const now = new Date();
+                const diff = endTime - now;
+
+                if (diff <= 0) {
+                    clearInterval(interval);
+                    countdownDisplay.textContent = "Час вийшов!";
+                    return;
+                }
+
+                const  days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+                const minutes = Math.floor((diff / (1000 * 60)) % 60);
+                const seconds = Math.floor((diff / 1000) % 60);
+
+                countdownDisplay.textContent = `Залишилось: ${days}д ${hours}г ${minutes}хв ${seconds}сек`;
+            }, 1000);
+        }
+
+        function calculateBirthday() {
+            const input = document.getElementById("birthday").value;
+            const output = document.getElementById("birthday-countdown");
+
+            if (!input) {
+                output.textContent = "Виберіть дату народження";
+                return;
+            }
+
+            const now = new Date();
+            const birth = new Date(input);
+            const currentYear = now.getFullYear();
+
+            let nextBirthday = new Date(currentYear, birth.getMonth(), birth.getDate());
+            if (nextBirthday < now) {
+                nextBirthday.setFullYear(currentYear + 1);
+            }
+
+            const  diff = nextBirthday - now;
+
+            const months = Math.floor(diff / (1000 * 60 * 60 * 24 * 30.44));
+            const days = Math.floor((diff / (1000 * 60 * 60 * 24)) % 30.44);
+            const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+            const minutes = Math.floor((diff / (1000 * 60)) % 60);
+            const seconds = Math.floor((diff / 1000) % 60);
+
+            output.textContent = `До дня народження залишилось: ${months} міс, ${days} днів, ${hours} год, ${minutes} хв, ${seconds} сек`;
+        }
+    </script>
+</body>
+</html>

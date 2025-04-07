@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .traffic-lights {
+            display: flex;
+            flex-direction: column;
+            padding: 5px 5px;
+            gap: 10px;
+            width: 150px;
+            background: black;
+        }
+
+        .traffic-lights div {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: gray;
+        }
+
+        .traffic-lights label {
+            color: white;
+            margin-top: 25px;
+        }
+
+         button {
+            margin-top: 25px;
+            height: 30px;
+            background-color: forestgreen;
+            color: white;
+        }
+
+        #next-button {
+            margin-top: 60px;
+            margin-left: -72px;
+            height: 30px;
+            background-color: dodgerblue;
+            color: white;
+        }
+    </style>
+</head>
+<body style="display: flex; flex-direction: row">
+    <div class="traffic-lights" id="traffic-lights">
+        <div id="red"></div>
+        <div id="yellow"></div>
+        <div id="green"></div>
+    </div>
+    <form class="traffic-lights" id="traffic-lights-settings">
+        <label for="red-input">Red interval:</label>
+        <input type="number" id="red-input" name="red-input">
+
+        <label for="yellow-input">Yellow interval:</label>
+        <input type="number" id="yellow-input" name="yellow-input">
+
+        <label for="green-input">Green interval:</label>
+        <input type="number" id="green-input" name="green-input">
+    </form>
+    <button id="save-button">Зберегти</button>
+    <button id="next-button">Наступний стан</button>
+
+    <div style="margin-left: 30px;">
+        <h2>Поточний стан: <span id="status">червоний</span></h2>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const red = document.getElementById("red");
+            const yellow = document.getElementById("yellow");
+            const green = document.getElementById("green");
+            const saveButton = document.getElementById("save-button");
+            const redInput = document.getElementById("red-input");
+            const yellowInput = document.getElementById("yellow-input");
+            const greenInput = document.getElementById("green-input");
+            const statusLabel = document.getElementById("status");
+            const nextButton = document.getElementById("next-button");
+
+            let currentLight = "red";
+            let redInterval = 5000;
+            let yellowInterval = 3000;
+            let greenInterval = 7000;
+            let trafficInterval;
+            let blinkInterval;
+            let timeouts = [];
+
+            redInput.value = redInterval / 1000;
+            yellowInput.value = yellowInterval / 1000;
+            greenInput.value = greenInterval / 1000;
+
+            saveButton.addEventListener("click", restartTrafficLights);
+            nextButton.addEventListener("click", nextLight);
+
+            function nextLight() {
+                clearInterval(trafficInterval);
+                clearInterval(blinkInterval);
+                clearAllTimeouts();
+
+                if (currentLight === "red") {
+                    setLight("yellow");
+                } else if (currentLight === "yellow") {
+                    setLight("green");
+                } else if (currentLight === "green") {
+                    setLight("red");
+                } else {
+                    setLight("red");
+                }
+            }
+
+            function blinkYellow(times,interval) {
+                let count = 0;
+                blinkInterval = setInterval(() => {
+                    yellow.style.backgroundColor = count % 2 === 0 ? "yellow" : "gray";
+                    count++;
+                    if (count >= times * 2) {
+                        clearInterval(blinkInterval);
+                        yellow.style.backgroundColor = "gray";
+
+                    }
+                }, interval);
+            }
+
+            function startTrafficLights() {
+                clearAllTimeouts();
+                setLight("red");
+
+                timeouts.push(setTimeout(() => {
+                    setLight("yellow");
+                }, redInterval));
+
+                timeouts.push(setTimeout(() => {
+                    setLight("green");
+                }, redInterval + yellowInterval));
+
+                timeouts.push(setTimeout(() => {
+                    setLight("none");
+                    blinkYellow(3, 1000);
+                }, redInterval + yellowInterval + greenInterval));
+            }
+
+            function setLight(color) {
+                currentLight = color;
+                red.style.backgroundColor = color === "red" ? "red" : "gray";
+                yellow.style.backgroundColor = color === "yellow" ? "yellow" : "gray";
+                green.style.backgroundColor = color === "green" ? "green" : "gray";
+
+                switch (color) {
+                    case "red":
+                        statusLabel.textContent = "червоний";
+                        break;
+                    case "yellow":
+                        statusLabel.textContent = "жовтий";
+                        break;
+                    case "green":
+                        statusLabel.textContent = "зелений";
+                        break;
+                    default:
+                        statusLabel.textContent = "вимкнено";
+                }
+            }
+
+            function restartTrafficLights() {
+                clearInterval(trafficInterval);
+                clearInterval(blinkInterval);
+                clearAllTimeouts();
+
+                redInterval = parseInt(redInput.value) * 1000;
+                yellowInterval = parseInt(yellowInput.value) * 1000;
+                greenInterval = parseInt(greenInput.value) * 1000;
+
+                startTrafficLights();
+                trafficInterval = setInterval(startTrafficLights, redInterval + yellowInterval + greenInterval + 6000);
+            }
+
+            function clearAllTimeouts() {
+                timeouts.forEach(clearTimeout);
+                timeouts = [];
+            }
+
+            startTrafficLights();
+            trafficInterval = setInterval(startTrafficLights, redInterval + yellowInterval + greenInterval + 6000);
+        })
+    </script>
+</body>
+</html>
