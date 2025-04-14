@@ -1,0 +1,355 @@
+body {
+    background: #000;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    font-family: 'Western', 'Georgia', serif;
+}
+
+
+/*                              Game menu style                             */
+.game-menu,
+.win-screen {
+    width: 100vw;
+    height: 100vh;
+    background: url("/img/main-background.png") no-repeat center center;
+    background-size: cover;
+}
+
+.game-menu__title {
+    position: fixed;
+    top: 15%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+
+    font-size: 70px;
+    text-transform: uppercase;
+    text-align: center;
+}
+/*                              End Game menu style                          */
+
+/*                              Buttons style                               */
+.button {
+    position: fixed;
+    left: 50%;
+    top: 70%;
+    transform: translate3d(-50%, -50%, 0);
+
+    padding: 0;
+    border: 0;
+    outline: 0;
+
+    font-family: 'Western', 'Georgia', serif;
+    font-size: 20px;
+    text-transform: uppercase;
+
+    background: transparent;
+    color: #e20f0f;
+    cursor: pointer;
+}
+
+.button-restart {
+    display: none;
+    top: 90%;
+    z-index: 1001;
+}
+
+.button-next-level {
+    display: none;
+    top: 90%;
+    z-index: 1001;
+}
+
+.button:hover {
+    color: #000;
+}
+
+.button:active {
+    color: #000;
+}
+/*                              End Buttons style                           */
+
+/*                              Main game screen style                       */
+
+.wrapper {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    transform: none;
+    box-sizing: border-box;
+}
+
+.game-screen {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url("/img/bg.png") no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+/*                              End Main game screen style                   */
+
+/*                              Sreen death style                          */
+.game-screen--death {
+    animation: 4s player-death linear;
+}
+
+@keyframes player-death {
+    0% {
+        box-shadow: inset 0 0 400px rgba(215, 35, 0, 0.5);
+    }
+    20% {
+        box-shadow: inset 0 0 300px rgba(215, 35, 0, 0.5);
+    }
+    40% {
+        box-shadow: inset 0 0 200px rgba(215, 35, 0, 0.5);
+    }
+    100% {
+        box-shadow: inset 0 0 100px rgba(215, 35, 0, 0.5);
+    }
+}
+/*                              End Sreen death style                        */
+
+/*                              Alert messages style                         */
+.message {
+    display: none;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 36%;
+    transform: translate3d(-50%, -50%, 0);
+    z-index: 10;
+
+    font-family: 'Western', 'Georgia', serif;
+    font-size: 48px;
+    font-weight: bold;
+    text-shadow: 2px 2px 0 #000, 4px 4px 0 #600;
+
+    padding: 10px 20px;
+    border: 3px solid #fff;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.5);
+
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.message--fire {
+    display: none;
+    width: 116px;
+    height: 68px;
+    scale: 0.4;
+    background: url("/img/fire-right.png") no-repeat;
+    left: 60%;
+}
+
+.message--dead,
+.message--win {
+    left: 50%;
+    top: 30%;
+
+    font-family: 'Western', 'Georgia', serif;
+    font-size: 30px;
+    color: #fff;
+}
+/*                              End Alert messages style                     */
+
+/*                              Game panels for scores style                 */
+.white-line {
+    position: absolute;
+    left: 50px;
+    top: 10%;
+    z-index: 700;
+    width: 800px;
+    border-bottom: 2px solid #fff;
+}
+
+.game-panels {
+    display: none;
+}
+
+.players-panel,
+.time-panel,
+.score-panel {
+    padding: 10px;
+
+    font-family: 'Western', 'Georgia', serif;
+    font-size: 25px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #80d010;
+}
+
+.time-panel {
+    position: absolute;
+    left: 70%;
+    top: 2px;
+    z-index: 700;
+}
+
+.time-panel__gunman,
+.time-panel__you {
+    font-family: 'Western', 'Georgia', serif;
+    font-size: 65px;
+}
+
+.time-panel__you  {
+    margin-bottom: 5px;
+}
+
+.players-panel {
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    box-sizing: border-box;
+    transform: translate3d(-50%, -50%, 0);
+    z-index: 700;
+}
+
+.players-panel__you,
+.players-panel__gunman {
+    padding: 10px;
+    border: 2px solid #80d010;
+
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.players-panel__you {
+    margin-bottom: 10px;
+}
+
+.score-panel {
+    text-align: center;
+}
+
+.score-panel__score {
+    position: absolute;
+    left: 25%;
+    top: 85%;
+    transform: translate3d(-50%, -50%, 0);
+    z-index: 700;
+
+    box-sizing: border-box;
+}
+
+.score-panel__level {
+    position: absolute;
+    left: 70%;
+    top: 85%;
+    z-index: 700;
+    transform: translate3d(-50%, -50%, 0);
+
+    box-sizing: border-box;
+}
+/*                              End Game panels for scores style             */
+
+/*                              Game win screen style                       */
+.win-screen {
+    display: none;
+    /* display: block;*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+
+    box-sizing: border-box;
+    width: 800px;
+    height: 480px;
+
+    background: url("/img/main-background.png") no-repeat;
+}
+
+.win-screen__title {
+    position: fixed;
+    top: 35%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+
+    font-size: 50px;
+    line-height: 70px;
+    text-transform: uppercase;
+    text-align: center;
+}
+/*                              End Game win screen style                    */
+
+/*                              Gunman style                                 */
+.gunman-level-1 {
+    width: 33px;
+    height: 65px;
+    background: url("/img/gunman.png") 0 0;
+    position: absolute;
+    transform: scale(3) translate(-50%, -50%);
+    left: 100%;
+    top: 70vh;
+    animation: gunman-move-to-center 2s ease-in-out forwards, gunman-level-1__walk 0.8s steps(3) infinite;
+}
+
+.gunman-level-1__standing {
+    background-position: 164px 0;
+    left: 50%;
+    animation: none;
+}
+
+.gunman-level-1__ready {
+    background-position: -202px 0;
+    left: 50%;
+    animation: none;
+}
+
+.gunman-level-1__shooting {
+    background-position: -940px 0;
+    width: 135px;
+    left: 1512px;
+    animation: gunman-level-1__duel 0.5s step-start 1;
+}
+
+.gunman-level-1__death {
+    background-position: -338px 0;
+    width: 33px;
+    height: 65px;
+    left: 50%;
+    animation: gunman-level-1__death 0.8s steps(2) 1;
+}
+
+@keyframes gunman-level-1__walk {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -99px 0;
+    }
+}
+
+@keyframes gunman-move-to-center {
+    from {
+        left: 100%;
+    }
+    to {
+        left: 50%;
+    }
+}
+
+@keyframes gunman-level-1__duel {
+    from {}
+    to {}
+}
+
+@keyframes gunman-level-1__death {
+    from {
+        background-position: -338px 0;
+    }
+    to {
+        background-position: -403px 0;
+    }
+}
