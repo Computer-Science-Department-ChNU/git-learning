@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="header">
+
+    </div>
+
+    <div class="main">
+        <div class="block-info">
+            <div class="info price">
+                <label>Ціна всіх товарів: <span id="infoPrice">0$</span></label>
+            </div>
+
+            <div class="block filters" id="filterButtons">
+                <button class="info-btn filter active" data-category="all">Усі товари</button>
+            </div>
+            <div class="block sorting" id="sortingButtons">
+                <button class="info-btn sort" data-sort="price">Сортувати за ціною</button>
+                <button class="info-btn sort" data-sort="created">Сортувати за датою створення</button>
+                <button class="info-btn sort" data-sort="updated">Сортувати за датою оновлення</button>
+                <button class="info-btn sort reset" data-sort="reset">Скинути сортування</button>
+            </div>
+        </div>
+        <label class="warning-text" id="warningText">Наразі список товарів пустий!</label>
+
+        <div class="block-cards">
+            <ul class="list-cards">
+                <li class="card add">
+                    <h5 class="card-title">Додайте новий товар </h5>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="modal-wrapper" id="modalWrapper">
+        <div class="modal">
+            <h2>Новий товар</h2>
+            <input type="text" id="productName" placeholder="Назва товару"/>
+            <input type="number" id="productPrice" placeholder="Ціна" />
+            <div id="productCategory">
+                Оберіть категорію:
+            </div>
+            <input type="file" id="productImage" placeholder="Посилання на зображення" />
+            <button id="submitProduct">Додати</button>
+            <button id="closeModal">Скасувати</button>
+        </div>
+    </div>
+
+    <div class="footer">
+
+    </div>
+
+    <div id="snackbar"></div>
+    <script src="script.js"></script>
+</body>
+</html>

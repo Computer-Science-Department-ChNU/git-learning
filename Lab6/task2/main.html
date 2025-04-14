@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <div class="block-schedule">
+            <div class="add-task">
+                <input type="text" id="inputTask" placeholder="Текст задачі"/>
+                <button id="add-btn">Додати</button>
+            </div>
+
+            <div class="sort-task" style="margin: 0 20px 10px 20px;">
+                <label for="sortSelect">Сортувати:</label>
+                <select id="sortSelect">
+                    <option value="created">За датою додавання</option>
+                    <option value="updated">За датою оновлення</option>
+                    <option value="status">За станом виконання</option>
+                </select>
+            </div>
+
+            <ul class="task-list" id="taskList">
+
+            </ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
