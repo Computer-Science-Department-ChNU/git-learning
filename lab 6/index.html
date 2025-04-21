@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8" content="width=device-width, initial-scale=1.0">
+    <title>Список товарів</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <h1>Магазин товарів</h1>
+    <div id="total-price">Загальна вартість: 0 грн</div>
+</header>
+
+<main>
+    <section id="filters">
+        <h2>Фільтр по категоріях</h2>
+        <div id="category-buttons"></div>
+        <button id="reset-filter">Скинути фільтр</button>
+    </section>
+
+    <section id="sorting">
+        <h2>Сортування</h2>
+        <button id="sort-price">Сортувати за ціною</button>
+        <button id="sort-created">Сортувати за датою створення</button>
+        <button id="sort-updated">Сортувати за датою оновлення</button>
+        <button id="reset-sorting">Скинути сортування</button>
+    </section>
+
+    <section id="product-list-selection">
+        <p id="empty-message">Наразі список товарів пустий. Додайте новий товар.</p>
+        <div id="product-list"></div>
+    </section>
+
+    <button id="add-product-button">Додати новий товар</button>
+</main>
+
+<!--Модальне вікно-->
+<div id="modal" class="hidden">
+    <div class="modal=content">
+        <form id="product-form">
+            <h2 id="modal-title">Новий товар</h2>
+            <input type="hidden" id="product-id">
+            <label>
+                Назва:
+                <input type="text" id="product-name" required>
+            </label>
+            <label>
+                Ціна (грн):
+                <input type="number" id="product-price" min="0" required>
+            </label>
+            <label>
+                Категорія:
+                <input type="text" id="product-category" required>
+            </label>
+            <label>
+                Зображення (URL):
+                <input type="file" id="product-image" accept="image/*">
+            </label>
+            <button type="submit">Зберегти</button>
+            <button type="button" id="cancel-button">Скасувати</button>
+        </form>
+    </div>
+</div>
+
+<!--Toast-->
+<div id="toast"></div>
+
+<script src="main.js"></script>
+</body>
+</html>
