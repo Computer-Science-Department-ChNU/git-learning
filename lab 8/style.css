@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: #f7f7f7;
+    padding: 20px;
+}
+
+#settings {
+    margin-bottom: 20px;
+}
+
+#settings div{
+    padding: 10px;
+}
+
+#settings button {
+    margin: 5px;
+    padding: 10px 15px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-sizing: border-box;
+}
+
+button {
+    margin: 5px;
+    padding: 10px 15px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-sizing: border-box;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+
+#info {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+#game {
+    display: grid;
+    gap: 10px;
+    justify-items: center;
+    justify-content: center;
+}
+
+.card {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    background-color: #2980b9;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+}
+
+.card-back img{
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+}
+
+.card-back {
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.card.flipped img,
+.card.matched img {
+    display: block;
+}
+
+.card.flipped,
+.card.matched {
+    background-color: transparent;
+    cursor: default;
+}
