@@ -1,11 +1,1 @@
-## Hi!
-
-I am Artem Karachevtsev.
-Greetings to all!
-
-
-Bonjour! I'm Kate and that's my 2nd try!
-Greetings from Vitalii.
-
-Hello! I'm Maks and I very enjoyed this course ;)
-Hello world from Diana! :P
+hi, l'm Max  really like the material provided by our teacher Artem Karachevtsev. I was interested in git in my first year, but then there was little information about it, but now there is more than expected, and it's really cool.
