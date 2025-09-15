@@ -21,9 +21,9 @@ Hello Git! From Oksana.
 Hello from Stepan)
 
 Hey, I'm Yeghor! This is my attempt to tinker with Git :0
-<<<<<<< HEAD
+
 Hello from Dmytro!)
-=======
 
 Hello from Tolik
->>>>>>> 857ad14e691380aaa670d71956fcf27c21dce880
+
+Hi, I'm Anhelina  
