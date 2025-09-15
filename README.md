@@ -1,5 +1,3 @@
-## Hi!
-
 I am Artem Karachevtsev.
 Greetings to all!
 
@@ -13,11 +11,22 @@ Hello! I'm Maks and I very enjoyed this course ;)
 
 Hello world from Diana! :P
 
+Hi, I'm Tim. I hope this doesn't cause merge conflict
+
 Hey! I'm Sebastian, hope Git is kinder to me than exams xD
+
+
+Hello Git! From Oksana.
 
 Hello from Stepan)
 
 Hey, I'm Yeghor! This is my attempt to tinker with Git :0
 
+
 Hey! I'm Vlad and I really enjoyed learning Git ;)
 
+
+Hello from Dmytro!)
+
+
+Hello from Tolik
