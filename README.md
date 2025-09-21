@@ -94,4 +94,4 @@ Hi from Myroslav
 
 Hello everyone form Vasya
 
-Hello from Zlata ^^
+Hello from Zlata ^^)
