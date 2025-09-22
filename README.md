@@ -35,6 +35,15 @@ Hello from Stepan)
 Hey, I'm Yeghor! This is my attempt to tinker with Git :0
 
 
+
+
+
+
+Hello from Dmytro!)
+
+
+Hello from Tolik
+
 Hello from Dmytro!)
 
 Hello from Tolik
@@ -103,3 +112,4 @@ Hi from Myroslav
 Hello everyone form Vasya
 
 Yo, I'm Sasha 
+Hey! I'm Vlad and I really enjoyed learning Git ;)
