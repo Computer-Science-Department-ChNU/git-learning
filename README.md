@@ -22,6 +22,8 @@ Hello from Stepan)
 
 Hi from Max
 
+
+
 Hey, I'm Yeghor! This is my attempt to tinker with Git :0
 <<<<<<< HEAD
 Hello from Dmytro!)
