@@ -17,9 +17,11 @@ Hello world from Diana! :P
 hello there! Vanya' is here!
 
 
+
 Hello world from Diana! :P
 
 hello there! Vanya is here!
+
 
 
 Hi, I'm Tim. I hope this doesn't cause merge conflict
@@ -37,16 +39,19 @@ Hello from Stepan)
 Hey, I'm Yeghor! This is my attempt to tinker with Git :0
 
 
+
 Hello from Dmytro!)
 
 Hello from Tolik
 
-Hi there from Daryna 
+Hi there from Daryna
 
 Hello from Dmytro!)
 
 
+
 Hello from Tolik
+
 
 
 Hello from Dmytro!)
@@ -63,7 +68,7 @@ Hello frome Misha
 
 Hello! I am Anatoliy, nice to meet you!
 
-
+Hello from Vladyslav
 
 HELLO from Leonid
 
@@ -89,7 +94,7 @@ Hello from Artem
 
 Hello from Dimon
 
-Greetings from Oleksandr & Kirilo
+Greetings from Oleksandr \& Kirilo
 
 Hi from Tanya
 
@@ -109,10 +114,11 @@ Hi from Myroslav
 
 Hello everyone form Vasya
 
-Yo, I'm Sasha 
+Yo, I'm Sasha
 
 Hello everyone, I'm Sergii. Nice to meet you all!
 
 im jeka()
 
 Gutten Morgen von Oleksii
+
