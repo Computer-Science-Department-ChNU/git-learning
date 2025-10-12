@@ -1,0 +1,22 @@
+<div class="user-card" [ngClass]="getCardColor()">
+  <img [ngSrc]="user.photo" alt="{{ user.firstName }}"
+       width="150" height="150" class="user-photo" />
+
+  <div class="user-info">
+    <h2>{{ user.firstName }} {{ user.lastName }}</h2>
+    <p><strong>Gender:</strong> {{ user.gender }}</p>
+    @if (user.age > 18) {
+      <p><strong>Age:</strong> {{ user.age }}</p>
+    }
+    <p><strong>Position:</strong> {{ user.position }}</p>
+
+    <div class="user-hobbies">
+      <h4>Hobbies:</h4>
+      <ul>
+        @for (hobby of user.hobbies; track hobby) {
+          <li>{{ hobby }}</li>
+        }
+      </ul>
+    </div>
+  </div>
+</div>

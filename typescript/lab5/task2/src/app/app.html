@@ -1,0 +1,16 @@
+<main class="main">
+  <div class="toolbar">
+    <button (click)="setFilter('')">All</button>
+    <button (click)="setFilter('male')">Male</button>
+    <button (click)="setFilter('female')">Female</button>
+  </div>
+
+  @if (filteredUsers.length === 0) {
+    Список юзерів пустий
+  }
+
+  @for (user of filteredUsers; track user) {
+    <app-user-card [user]="user"></app-user-card>
+  }
+</main>
+<router-outlet />

@@ -1,0 +1,49 @@
+.user-card {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  max-width: 500px;
+  margin: 24px auto;
+  font-family: Arial, sans-serif;
+}
+
+.user-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 20px;
+  border: 3px solid #007bff;
+}
+
+.user-info h2 {
+  margin: 0;
+  color: #333;
+}
+
+.user-info p {
+  margin: 4px 0;
+  color: #555;
+}
+
+.user-hobbies h4 {
+  margin-bottom: 6px;
+  color: #007bff;
+}
+
+.user-hobbies ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin: 0;
+}
+
+.adult-card {
+  background-color: #d0f0c0;
+}
+
+.minor-card {
+  background-color: #f0d0d0;
+}
