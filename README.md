@@ -5,6 +5,7 @@ I am Artem Karachevtsev. Greetings to all!
 Bonjour! I'm Kate and that's my 2nd try!
 
 Greetings from Vitalii.
+hello there! Maxim.
 
 Hello world from Diana! :P
 
