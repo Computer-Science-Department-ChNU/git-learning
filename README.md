@@ -10,6 +10,7 @@ hello there! Maxim.
 Hello world from Diana! :P
 
 Hello everyone! I'm Karina star
+Hello! Im Maks
 
 Hello! Im Maks and I very enjoyed this course ;)
 
