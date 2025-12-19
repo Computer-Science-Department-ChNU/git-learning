@@ -5,14 +5,18 @@ I am Artem Karachevtsev. Greetings to all!
 Bonjour! I'm Kate and that's my 2nd try!
 
 Greetings from Vitalii.
+hello there! Maxim.
 
 Hello world from Diana! :P
 
 Hello everyone! I'm Karina star
+Hello! Im Maks
 
 Hello! Im Maks and I very enjoyed this course ;)
 
 Hello world from Diana! :P
+Maks
+
 
 hello there! Vanya' is here!
 
